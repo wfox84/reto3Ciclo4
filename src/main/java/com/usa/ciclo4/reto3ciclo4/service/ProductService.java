@@ -72,4 +72,12 @@ public class ProductService {
         }).orElse(false);
         return productBoolean;
     }
+
+    public List<CleaningProduct> getByPrice(Double price){
+        return productRepository.getByPrice(price);
+    }
+
+    public List<CleaningProduct> getByDescriptionContainingIgnoreCase(String description){
+        return productRepository.getByDescriptionContainingIgnoreCase(description);
+    }
 }

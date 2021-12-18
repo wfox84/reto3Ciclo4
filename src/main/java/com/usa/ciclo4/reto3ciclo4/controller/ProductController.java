@@ -46,4 +46,15 @@ public class ProductController {
         return productService.delete(id);
     }
 
+    @GetMapping("/price/{price}")
+    public List<CleaningProduct> getByPrice(@PathVariable("price") Double price){
+        return productService.getByPrice(price);
+    }
+
+    @GetMapping("/description/{description}")
+    public List<CleaningProduct> getByDescriptionContainingIgnoreCase(@PathVariable("description") String description){
+        return productService.getByDescriptionContainingIgnoreCase(description);
+    }
+
+
 }
