@@ -34,7 +34,6 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
     public Optional<CleaningProduct> getProductById(@PathVariable("id") int id){
         return productService.getProduct(id);
     }
